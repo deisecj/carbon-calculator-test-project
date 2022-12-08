@@ -1,0 +1,26 @@
+### Automated Tests ###
+
+TC01: Validate when started the carbon calculatory.
+Given that the user accesses the URL https://www3.epa.gov/carbon-footprint-calculator/
+And type a valid number of people in household
+And type a valid ZIP code
+When click on the Get Started button
+Then redirect to calculator input infos Household Carbon Footprint Calculator page
+
+TC02: Validate when some fields are filled and try generate report.
+Given that the user accesses the URL https://www3.epa.gov/carbon-footprint-calculator/
+And type a valid number of people in household
+And type a valid ZIP code
+And click on the Get Started button
+When type some fields in Home Energy
+And generates report
+Then returns a report values greater than zero for Home Energy.
+
+TC03: Validate when all fields are not filled and try generate report.
+Given that the user accesses the URL https://www3.epa.gov/carbon-footprint-calculator/
+And type a valid number of people in household
+And type a valid ZIP code
+And click on the Get Started button
+When type some fields in Home Energy
+And generates report
+Then returns a report values equal zero for all categories.
