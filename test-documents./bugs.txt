@@ -1,0 +1,20 @@
+BUG 01:
+Summary: The link inside the About section disappears when clicking.
+Steps to reproduce:
+1- Go to https://www3.epa.gov/carbon-footprint-calculator/
+2- Click on the link "Assumptions and References page."
+Result: The link disappears from the screen.
+
+BUG 02:
+Summary: The link inside the About text does not redirect to the URL described on the HTML element.
+Steps to reproduce:
+1- Go to https://www3.epa.gov/carbon-footprint-calculator/
+2- Click on the link "Assumptions and References page."
+Result: The URL shown on the new tab (https://www.epa.gov/climate-change) is different from the URL on the HTML element (href="https://www.epa.gov/climatechange/assumptions-and-references-household-carbon-footprint-calculator).
+
+BUG 03:
+Summary: Links inside the How To section disappears when clicking.
+Steps to reproduce:
+1- Go to https://www3.epa.gov/carbon-footprint-calculator/
+2- Click on the link "fueleconomy.gov," or "calculate your car's actual efficiency."
+Result: The links disappears from the screen.

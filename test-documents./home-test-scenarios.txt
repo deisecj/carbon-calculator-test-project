@@ -1,0 +1,51 @@
+### Automated Tests ###
+
+TC01: Validate when number of people in household and ZIP code are empty.
+Given that the user accesses the URL https://www3.epa.gov/carbon-footprint-calculator/
+When number of people in household and ZIP code are empty 
+And click on the Get Started button
+Then returns error message for each required field
+
+TC02: Validate when number of people in household is empty.
+Given that the user accesses the URL https://www3.epa.gov/carbon-footprint-calculator/
+When type a valid ZIP code
+And click on the Get Started button
+Then returns error message for required field
+
+TC03: Validate when ZIP code is empty.
+Given that the user accesses the URL https://www3.epa.gov/carbon-footprint-calculator/
+When type a valid number of people in household
+And click on the Get Started button
+Then returns error message for required field
+
+TC04: Validate when ZIP code is invalid.
+Given that the user accesses the URL https://www3.epa.gov/carbon-footprint-calculator/
+When type ZIP code is invalid
+And type a valid number of people in household
+And click on the Get Started button
+Then returns error message for invalid data
+
+TC05: Validate ZIP code data not existing.
+Given that the user accesses the URL https://www3.epa.gov/carbon-footprint-calculator/
+When type ZIP code nonexistent
+And type a valid number of people in household
+And click on the Get Started button
+Then returns error message for data not found
+
+
+### Manual Tests ###
+
+TC06: Validate link in the About section
+Given that the user accesses the page https://www3.epa.gov/carbon-footprint-calculator/
+When click in the link "Assumptions and References page."
+Then it is redirected to the Assumptions and References page
+
+TC07: Validate link "fueleconomy.gov," in the How To section
+Given that the user accesses the page https://www3.epa.gov/carbon-footprint-calculator/
+When click in the link "fueleconomy.gov,"
+Then it is redirected to the Fuel Economy page
+
+TC08: Validate link "calculate your car's actual efficiency." in the How To section
+Given that the user accesses the page https://www3.epa.gov/carbon-footprint-calculator/
+When click in the link "calculate your car's actual efficiency."
+Then it is redirected to the Fuel Economy page
